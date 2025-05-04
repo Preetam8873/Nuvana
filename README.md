@@ -18,8 +18,8 @@ A comprehensive banking portal built with Python and Streamlit.
 
 1. Clone the repository:
 \`\`\`bash
-git clone https://github.com/yourusername/nuvana-bank-portal.git
-cd nuvana-bank-portal
+[git clone https://github.com/Preetam8873/Nuvana.git]
+
 \`\`\`
 
 2. Install the required dependencies:
