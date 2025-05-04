@@ -1,0 +1,235 @@
+/* Main Styles */
+:root {
+  --primary-color: #1e3a8a;
+  --primary-light: #3b82f6;
+  --primary-dark: #1e40af;
+  --secondary-color: #f59e0b;
+  --secondary-light: #fbbf24;
+  --secondary-dark: #d97706;
+  --success-color: #10b981;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --background-color: #f9fafb;
+  --card-background: #ffffff;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --primary-color: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --secondary-color: #f59e0b;
+  --secondary-light: #fbbf24;
+  --secondary-dark: #d97706;
+  --success-color: #10b981;
+  --danger-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --background-color: #111827;
+  --card-background: #1f2937;
+  --text-color: #f9fafb;
+  --text-light: #9ca3af;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Login and Registration */
+.login-container {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.bank-title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bank-slogan {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Dashboard */
+.dashboard-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+.balance-large {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Transactions */
+.transaction-table {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+.transaction-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-desc {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.transaction-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.transaction-amount {
+  font-weight: 700;
+}
+
+.transaction-amount.credit {
+  color: var(--success-color);
+}
+
+.transaction-amount.debit {
+  color: var(--danger-color);
+}
+
+.transaction-type {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Loans */
+.loan-details {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+.emi-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.calculator-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+/* Status Indicators */
+.status-approved {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.status-pending {
+  color: var(--warning-color);
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+/* Receipt */
+.receipt {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+  border: 1px dashed var(--border-color);
+}
+
+/* Profile and Settings */
+.profile-info {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+/* Help and Support */
+.contact-info {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+}
+
+.ticket-details {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  margin-bottom: 1.5rem;
+  border: 1px dashed var(--border-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dashboard-card,
+.transaction-table,
+.loan-details,
+.profile-info,
+.contact-info {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-card,
+  .transaction-table,
+  .loan-details,
+  .profile-info,
+  .contact-info {
+    padding: 1rem;
+  }
+
+  .balance-large {
+    font-size: 1.5rem;
+  }
+
+  .bank-title {
+    font-size: 2rem;
+  }
+}
