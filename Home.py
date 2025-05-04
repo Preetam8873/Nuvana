@@ -281,14 +281,8 @@ def show_notification(message, type="info"):
 
 # UI Components
 def display_header():
-    col1, col2 = st.columns([1, 3])
-    
-    with col1:
-        st.image("https://via.placeholder.com/150x150.png?text=NB", width=100)
-    
-    with col2:
-        st.markdown('<h1 class="main-header">Nuvana Bank</h1>', unsafe_allow_html=True)
-        st.markdown('<p>Your Trusted Financial Partner</p>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Nuvana Bank</h1>', unsafe_allow_html=True)
+    st.markdown('<p>Your Trusted Financial Partner</p>', unsafe_allow_html=True)
 
 def display_notification():
     if st.session_state.notification:

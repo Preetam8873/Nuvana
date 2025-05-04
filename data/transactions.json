@@ -209,6 +209,13 @@
             "amount": 601.0,
             "description": "Transfer to sdadsasdsd: ",
             "timestamp": "2025-05-04T15:25:15.444729"
+        },
+        {
+            "id": 31,
+            "type": "debit",
+            "amount": 1.0,
+            "description": "Transfer to 2424: 224243",
+            "timestamp": "2025-05-04T22:35:36.414044"
         }
     ],
     "pk": [
@@ -337,6 +344,80 @@
             "amount": 301.0,
             "description": "Transfer to NB89646250: ",
             "timestamp": "2025-05-04T15:24:06.153434"
+        }
+    ],
+    "er": [
+        {
+            "id": 1,
+            "type": "credit",
+            "amount": 1000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:35:14.586861"
+        }
+    ],
+    "sa": [
+        {
+            "id": 1,
+            "type": "credit",
+            "amount": 10000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:41:26.761043"
+        },
+        {
+            "id": 2,
+            "type": "credit",
+            "amount": 10000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:42:22.312444"
+        },
+        {
+            "id": 3,
+            "type": "credit",
+            "amount": 5000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:42:24.800087"
+        },
+        {
+            "id": 4,
+            "type": "credit",
+            "amount": 5000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:42:26.467315"
+        },
+        {
+            "id": 5,
+            "type": "debit",
+            "amount": 1.0,
+            "description": "Transfer to 2424: 224243",
+            "timestamp": "2025-05-04T22:42:37.571609"
+        },
+        {
+            "id": 6,
+            "type": "debit",
+            "amount": 1.0,
+            "description": "Transfer to 2424: 224243",
+            "timestamp": "2025-05-04T22:42:39.206398"
+        },
+        {
+            "id": 7,
+            "type": "debit",
+            "amount": 401.0,
+            "description": "Transfer to 2424: 224243",
+            "timestamp": "2025-05-04T22:42:44.353528"
+        },
+        {
+            "id": 8,
+            "type": "debit",
+            "amount": 901.0,
+            "description": "Transfer to 2424: 224243",
+            "timestamp": "2025-05-04T22:42:49.517775"
+        },
+        {
+            "id": 9,
+            "type": "credit",
+            "amount": 5000,
+            "description": "Quick Add",
+            "timestamp": "2025-05-04T22:43:35.753086"
         }
     ]
 }
