@@ -14,7 +14,7 @@ import time
 st.set_page_config(
     page_title="Nuvana Bank",
     page_icon="🏦",
-    layout="wide",
+    layout="centered",  # Change from "wide" to "centered"
     initial_sidebar_state="expanded"
 )
 
@@ -80,6 +80,7 @@ st.markdown("""
     .sidebar .sidebar-content {
         background-color: #1E3A8A;
         color: white;
+        width: 200px; /* Adjust this value to make the sidebar narrower */
     }
     .account-balance {
         font-size: 2rem;
@@ -309,7 +310,7 @@ def display_sidebar():
         if st.session_state.logged_in:
             st.markdown(f'<p style="color: white;">Welcome, {st.session_state.username}</p>', unsafe_allow_html=True)
             
-            if st.button("Dashboard"):
+            if st.button("Home"):
                 navigate_to("dashboard")
             
             if st.button("Account Details"):
@@ -340,6 +341,7 @@ def display_sidebar():
 def login_page():
     st.markdown('<h2 class="sub-header">Login to Your Account</h2>', unsafe_allow_html=True)
     
+    # Use a single column for the form to make it narrower
     with st.form("login_form"):
         username = st.text_input("Username")
         password = st.text_input("Password", type="password")
@@ -692,7 +694,7 @@ def transfer_page():
                 show_notification(f"Successfully transferred ₹{amount:,.2f} to {recipient_account}", "success")
                 
                 # Refresh the page to show updated balance
-                st.rerun()
+                st.experimental_rerun()
     
     # Quick Transfer
     st.markdown('<h3>Quick Add Money (Demo)</h3>', unsafe_allow_html=True)
@@ -703,19 +705,19 @@ def transfer_page():
         if st.button("Add ₹1,000"):
             add_transaction(st.session_state.username, "credit", 1000, "Quick Add")
             show_notification("Added ₹1,000 to your account", "success")
-            st.rerun()
+            st.experimental_rerun()
     
     with col2:
         if st.button("Add ₹5,000"):
             add_transaction(st.session_state.username, "credit", 5000, "Quick Add")
             show_notification("Added ₹5,000 to your account", "success")
-            st.rerun()
+            st.experimental_rerun()
     
     with col3:
         if st.button("Add ₹10,000"):
             add_transaction(st.session_state.username, "credit", 10000, "Quick Add")
             show_notification("Added ₹10,000 to your account", "success")
-            st.rerun()
+            st.experimental_rerun()
 
 def emi_calculator_page():
     st.markdown('<h2 class="sub-header">EMI Calculator</h2>', unsafe_allow_html=True)

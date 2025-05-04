@@ -24,10 +24,11 @@ from utils.db import save_user_data, load_user_data, get_all_users, atomic_trans
 from utils.security import hash_password, verify_password, generate_session_id
 from pages.dashboard import show_dashboard
 from pages.transactions import show_transactions, perform_transfer
-from pages.loans import show_loans, show_emi_calculator
+from pages.Loans import show_loans, show_emi_calculator
 from pages.settings import show_settings
-from pages.admin import show_admin_panel
-from pages.help import show_help
+from pages.Admin import show_admin_panel
+from pages.Help import show_help
+from home import *
 
 # Set page configuration
 st.set_page_config(
@@ -424,11 +425,12 @@ def main():
         
         # Navigation menu
         selected = option_menu(
-            "Main Menu",
-            ["Dashboard", "Transactions", "Loans", "EMI Calculator", "Settings", "Help"],
-            icons=["house", "arrow-left-right", "cash-coin", "calculator", "gear", "question-circle"],
-            menu_icon="list",
+            "home",
+            ["admin", "dashboard", "help", "loans", "settings", "transactions"],
+            icons=["person", "speedometer", "question", "currency-exchange", "gear", "cash-stack"],
+            menu_icon="cast",
             default_index=0,
+            orientation="vertical"
         )
         
         # Admin panel for admin users
@@ -458,7 +460,7 @@ def main():
     
     # Main content
     if selected == "Dashboard":
-        show_dashboard(user_data)
+        show_dashboard(st.session_state.user_data)
     elif selected == "Transactions":
         show_transactions(user_data)
     elif selected == "Loans":
@@ -468,6 +470,7 @@ def main():
     elif selected == "Settings":
         show_settings(user_data)
     elif selected == "Help":
+        # Remove the help section from the sidebar
         show_help()
     elif selected == "Admin Panel" and user_data.get("role") == "admin":
         show_admin_panel()

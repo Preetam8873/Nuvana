@@ -5,7 +5,7 @@ import json
 import os
 import json
 from datetime import datetime
-# from utils.db import get_all_users, load_user_data, save_user_data, update_loan_status # Commented out as we'll load directly
+from utils.db import get_all_users
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 USERS_FILE = os.path.join(DATA_DIR, 'users.json')
@@ -343,7 +343,7 @@ def show_transaction_monitoring():
     processed_transactions = []
     # Assuming transactions_data structure is {transaction_id: {user_id: ..., account_number: ..., amount: ..., type: ..., timestamp: ..., description: ...}}
     for tx_id, tx_data in all_transactions_dict.items():
-        tx_copy = tx_data.copy()
+        tx_copy = dict(tx_data)
         tx_copy['transaction_id'] = tx_id # Ensure transaction_id is present
 
         user_id = tx_copy.get('user_id')
